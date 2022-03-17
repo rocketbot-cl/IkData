@@ -6,7 +6,7 @@
   
 Envia documentos a IkData para ser analizados y extraer información.
   
-![banner]()
+![banner](imgs/Modulo_IKData.jpg)
 
 ## Como instalar este módulo
   
