@@ -6,9 +6,9 @@
   
 Send documents and analyze them with AI on Ik Data.  
 
-## How to install this module
+## Howto install this module
   
-__Download__ and __install__ the content in 'modules' folder in Rocketbot path
+__Download__ and __install__ the content in 'modules' folder in Rocketbot path  
 
 ## How to use this module
   
@@ -30,9 +30,9 @@ Obtains batch instances and data.
 Obtains info about a batch.
 
 5. Get Batch JSON  
-Obtains info about a batch.
+Obtains info about a batch.  
 
-### Updates
+
 
 
 ----
