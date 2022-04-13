@@ -45,8 +45,9 @@ try:
 
         username = GetParams("username")
         password = GetParams("password")
+        server = GetParams("server")
         
-        ikData_I = IkDataObj(username, password)
+        ikData_I = IkDataObj(username, password, server)
 
         ikData_I.requestToken()
 

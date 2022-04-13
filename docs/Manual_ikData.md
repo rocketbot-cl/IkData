@@ -8,13 +8,12 @@ Envia documentos a IkData para ser analizados y extraer información.
   
 ![banner](imgs/Modulo_IKData.jpg)
 
+
 ## Como instalar este módulo
   
-__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.
+__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.  
 
-## Como usar este módulo
-  
-Para utilizar este módulo tienes que tener cuenta habilitada para usar con Ik Data. Tienes que tener los proyectos ya creados que analizaran los documentos en la misma plataforma.
+
 
 ## Descripción de los comandos
 
@@ -25,6 +24,7 @@ Conecta a IkData para empezar a interactuar
 | --- | --- | --- |
 |Nombre de usuario|Usuario de IkData con el cual interactuar.|usuario|
 |Password|Password del usuario de IkData|********|
+|Servidor|Servidor con el cual interactuar.|https://myapp.ikdata.com:8037|
 |Asignar resultado a variable|Variable donde guardar el resultado de la conexion.|Variable|
 
 ### Subir imagen para analizar

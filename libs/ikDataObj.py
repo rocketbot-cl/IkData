@@ -1,13 +1,14 @@
 import requests
 import base64
 import time
-
+# https://app.ikdata.co:8023
 class IkDataObj:
     
-    def __init__(self, username, password):
+    def __init__(self, username, password, server):
 
         self.username = username
         self.password = password
+        self.server = server
 
         preEncoding = f"{username}:{password}"
         preEncodingBytes = preEncoding.encode('ascii')
@@ -31,7 +32,7 @@ class IkDataObj:
             "Authorization": f"Basic {self.inBaseAuth}"
             }
 
-        r = requests.post("https://app.ikdata.co:8023/api/AuthenticationService/verifyAuthentication", headers=headers)
+        r = requests.post(f"{self.server}/api/AuthenticationService/verifyAuthentication", headers=headers)
         print(r.status_code)
         print(r.content)
         if r.content.decode() == "false":
@@ -56,7 +57,7 @@ class IkDataObj:
             ('file',(nameToUpload ,open(filePath,'rb'),'application/pdf'))
         }
 
-        r = requests.post("https://app.ikdata.co:8023/app/UploadService/BatchReceiver", headers=headers, data=data, files=files)
+        r = requests.post(f"{self.server}/app/UploadService/BatchReceiver", headers=headers, data=data, files=files)
 
         return r # true or false see status_code
 
@@ -66,7 +67,7 @@ class IkDataObj:
             "token" : self.token
         }
     
-        r = requests.get("https://app.ikdata.co:8023/api/BatchManagementService/getBatchInstances", headers=headers)
+        r = requests.get(f"{self.server}/api/BatchManagementService/getBatchInstances", headers=headers)
 
         return r
 
@@ -79,7 +80,7 @@ class IkDataObj:
         params = {
             "batchId" : batchId
         }
-        r = requests.get("https://app.ikdata.co:8023/api/BatchManagementService/getBatchInfo", headers=headers, params=params)
+        r = requests.get(f"{self.server}/api/BatchManagementService/getBatchInfo", headers=headers, params=params)
 
         return r
 
@@ -92,7 +93,7 @@ class IkDataObj:
         params = {
             "batchID" : idIknoPlus
         }
-        r = requests.get("https://app.ikdata.co:8023/api/ValidationService/getBatchJson", headers=headers, params=params)
+        r = requests.get(f"{self.server}/api/ValidationService/getBatchJson", headers=headers, params=params)
 
         return r
 
