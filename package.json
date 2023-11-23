@@ -119,6 +119,23 @@
                     {
                         "type": "input",
                         "placeholder": {
+                            "es": "https://myapp.ikdata.com:8037",
+                            "en": "https://myapp.ikdata.com:8037"
+                        },
+                        "title": {
+                            "es": "Servidor:",
+                            "en": "Server:"
+                        },
+                        "description":{
+                            "es":"Servidor con el cual interactuar.",
+                            "en":"Server that you want to interact with."
+                        },
+                        "id": "server",
+                        "css": "col-md-6"
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
                             "es": "Variable",
                             "en": "Variable",
                             "pr": "Variável"
