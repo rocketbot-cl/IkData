@@ -1,13 +1,16 @@
 import requests
 import base64
 import time
-# https://app.ikdata.co:8023
+import traceback
+
 class IkDataObj:
     
+    def __init__(self, username, password, server):
     def __init__(self, username, password, server):
 
         self.username = username
         self.password = password
+        self.server = server
         self.server = server
 
         preEncoding = f"{username}:{password}"
@@ -32,6 +35,7 @@ class IkDataObj:
             "Authorization": f"Basic {self.inBaseAuth}"
             }
 
+        r = requests.post(f"{self.server}/api/AuthenticationService/verifyAuthentication", headers=headers)
         r = requests.post(f"{self.server}/api/AuthenticationService/verifyAuthentication", headers=headers)
         print(r.status_code)
         print(r.content)
@@ -58,6 +62,7 @@ class IkDataObj:
         }
 
         r = requests.post(f"{self.server}/app/UploadService/BatchReceiver", headers=headers, data=data, files=files)
+        r = requests.post(f"{self.server}/app/UploadService/BatchReceiver", headers=headers, data=data, files=files)
 
         return r # true or false see status_code
 
@@ -67,6 +72,7 @@ class IkDataObj:
             "token" : self.token
         }
     
+        r = requests.get(f"{self.server}/api/BatchManagementService/getBatchInstances", headers=headers)
         r = requests.get(f"{self.server}/api/BatchManagementService/getBatchInstances", headers=headers)
 
         return r
@@ -81,6 +87,7 @@ class IkDataObj:
             "batchId" : batchId
         }
         r = requests.get(f"{self.server}/api/BatchManagementService/getBatchInfo", headers=headers, params=params)
+        r = requests.get(f"{self.server}/api/BatchManagementService/getBatchInfo", headers=headers, params=params)
 
         return r
 
@@ -94,14 +101,24 @@ class IkDataObj:
             "batchID" : idIknoPlus
         }
         r = requests.get(f"{self.server}/api/ValidationService/getBatchJson", headers=headers, params=params)
+        r = requests.get(f"{self.server}/api/ValidationService/getBatchJson", headers=headers, params=params)
 
         return r
 
     def waitForResponse(self, idIknoPlus):
-        a = [{"status":""}]
-        while a and a[0]["status"] not in ("VALIDATE", "OPEN"):
-            responseFromApi = self.getBatchInstances().json()
-            a = list(filter(lambda x: x["idIknoPlus"] == idIknoPlus, responseFromApi))
+        a = {"status":""}
+
+        while a and a["status"] not in ("VALIDATE", "OPEN"):
+            print(a["status"])
+            try:
+                a = self.getBatchInfo(idIknoPlus).json()
+            except Exception as e:
+                traceback.print_exc()
+                print(e)
             time.sleep(2)
+
+            if a["status"] == "ERROR":
+                raise Exception("An error ocurred uploading the file. Please check the response in your IkData server.")
+
         # return responseFromApi
         

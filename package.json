@@ -1,10 +1,15 @@
 {
     "author":"Caleb Cipra",
     "description": "Send documents and analyze them with AI on Ik Data.",
+    "description_lang": {
+        "es": "Envíe documentos y analícelos con IA en Ik Data.",
+        "en": "Send documents and analyze them with AI on Ik Data.",
+        "pr": "Envie documentos e analise-os com IA no Ik Data."
+    },
     "disclaimer":"THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.",
-    "version":"1.1.0",
+    "version":"1.2.0",
     "license": "MIT",
-    "homepage":"http://rocketbot.co/",
+    "homepage":"http://rocketbot.com/",
     "linux": true,
     "windows": true,
     "mac": true,
@@ -15,7 +20,8 @@
     },
     "title": {
         "en": "Ik Data",
-        "es": "Ik Data"
+        "es": "Ik Data",
+        "pr": "Ik Data"
     },
     "icon": "data:image/png;base64,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",
     "children": [
@@ -32,6 +38,12 @@
                 "title_options": "Seleccione una opción",
                 "options": null
             },
+            "pr": {
+                "title": "Conecte-se ao IkData",
+                "description": "Conecte-se ao IkData para começar a interagir",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
             "form": {
                 "css": "modal-lg",
                 "inputs": [
@@ -39,35 +51,70 @@
                         "type": "input",
                         "placeholder": {
                             "es": "usuario",
-                            "en": "username"
+                            "en": "username",
+                            "pr": "usuário"
                         },
                         "title": {
                             "es": "Nombre de usuario:",
-                            "en": "Username:"
+                            "en": "Username:",
+                            "pr": "Nome de usuário:"
                         },
                         "description":{
                             "es":"Usuario de IkData con el cual interactuar.",
-                            "en":"User from IkData that you want to interact with."
+                            "en":"User from IkData that you want to interact with.",
+                            "pr":"Usuário do IkData com o qual interagir."
                         },
                         "id": "username",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     },
                     {
                         "type": "input",
                         "placeholder": {
                             "es": "********",
-                            "en": "********"
+                            "en": "********",
+                            "pr": "********"
                         },
                         "title": {
                             "es": "Password",
-                            "en": "Password:"
+                            "en": "Password:",
+                            "pr": "Senha:"
                         },
                         "description":{
                             "es":"Password del usuario de IkData",
-                            "en":"Password of username from IkData."
+                            "en":"Password of username from IkData.",
+                            "pr":"Senha do usuário do IkData."
                         },
                         "id": "password",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
+                    },
+                    {
+                        "type": "input",
+                        "placeholder": {
+                            "es": "https://myapp.ikdata.com:8037",
+                            "en": "https://myapp.ikdata.com:8037",
+                            "pr": "https://myapp.ikdata.com:8037"
+                        },
+                        "title": {
+                            "es": "Servidor:",
+                            "en": "Server:",
+                            "pr": "Servidor:"
+                        },
+                        "description":{
+                            "es":"Servidor con el cual interactuar.",
+                            "en":"Server that you want to interact with.",
+                            "pr":"Servidor com o qual interagir."
+                        },
+                        "id": "server",
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     },
                     {
                         "type": "input",
@@ -90,23 +137,30 @@
                         "type": "input",
                         "placeholder": {
                             "es": "Variable",
-                            "en": "Variable"
+                            "en": "Variable",
+                            "pr": "Variável"
                         },
                         "title": {
                             "es": "Asignar resultado a variable:",
-                            "en": "Assign result to variable:"
+                            "en": "Assign result to variable:",
+                            "pr": "Atribuir resultado à variável:"
                         },
                         "help": {
                             "es": "Nombre de variable sin {}",
-                            "en": "Variable name without {}"
+                            "en": "Variable name without {}",
+                            "pr": "Nome da variável sem {}"
                         },
                         "description":{
                             "es":"Variable donde guardar el resultado de la conexion.",
-                            "en":"Variable where to save conection result."
+                            "en":"Variable where to save conection result.",
+                            "pr":"Variável onde salvar o resultado da conexão."
                         },
                         "remove_vars" : true,
                         "id": "whereToStore",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": false
                     }
                 ]
             },
@@ -136,6 +190,12 @@
                 "title_options": "Seleccione una opción",
                 "options": null
             },
+            "pr": {
+                "title": "Carregar imagem para análise",
+                "description": "Carregar imagem para análise",
+                "title_options": "Seleccione una opción",
+                "options": null
+            },
             "form": {
                 "css": "modal-lg",
                 "inputs": [
@@ -143,70 +203,81 @@
                         "type": "file_select",
                         "placeholder": {
                             "es": "C:/Usuario/Documentos",
-                            "en": "C:/User/Documents"
+                            "en": "C:/User/Documents",
+                            "pr": "C:/Usuario/Documentos"
                         },
                         "title": {
                             "es": "Seleccionar un archivo:",
-                            "en": "Select a file:"
+                            "en": "Select a file:",
+                            "pr": "Seleccionar um arquivo:"
+                        },
+                        "description": {
+                            "es": "Ruta donde está el archivo",
+                            "en": "Path to file",
+                            "pr": "Caminho para o arquivo"
                         },
                         "help": {
                             "es": "Ruta donde está el archivo",
-                            "en": "Path to file"
+                            "en": "Path to file",
+                            "pr": "Caminho para o arquivo"
                         },
                         "id": "fileToUpload",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     },
                     {
                         "type": "input",
                         "placeholder": {
                             "es": "4",
-                            "en": "4"
+                            "en": "4",
+                            "pr": "4"
                         },
                         "title": {
                             "es": "ProjectId:",
-                            "en": "ProjectId:"
+                            "en": "ProjectId:",
+                            "pr": "ProjectId:"
                         },
                         "description":{
                             "es":"ProjectId con el cual se quiere analizar el documento.",
-                            "en":"ProjectId with you want to analyze the document."
+                            "en":"ProjectId with you want to analyze the document.",
+                            "pr":"ProjectId com o qual você deseja analisar o documento."
                         },
                         "id": "projectId",
-                        "css": "col-md-6"
-                    },
-                    {
-                        "type": "input",
-                        "placeholder": {
-                            "es": "4",
-                            "en": "4"
-                        },
-                        "title": {
-                            "es": "Nombre con el cual subir:",
-                            "en": "Name to upload:"
-                        },
-                        "description":{
-                            "es":"Nombre con el cual se desea subir a la plataforma (adicionalmente tendra un timestamp en el nombre).",
-                            "en":"Name to upload the file (it will have a timestamp in the name too)."
-                        },
-                        "id": "nameToUpload",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     },
                     {
                         "type": "input",
                         "placeholder": {
                             "es": "Variable",
-                            "en": "Variable"
+                            "en": "Variable",
+                            "pr": "Variable"
                         },
                         "title": {
                             "es": "Asignar resultado a variable:",
-                            "en": "Assign result to variable:"
+                            "en": "Assign result to variable:",
+                            "pr": "Atribuir resultado à variável:"
+                        },
+                        "description": {
+                            "es": "Variable donde se guardará el resultado",
+                            "en": "Variable where the result will be stored",
+                            "pr": "Variável onde o resultado será armazenado"
                         },
                         "help": {
                             "es": "Nombre de variable sin {}",
-                            "en": "Variable name without {}"
+                            "en": "Variable name without {}",
+                            "pr": "Nome da variável sem {}"
                         },
                         "remove_vars" : true,
                         "id": "whereToStore",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": false
                     }
                 ]
             },
@@ -236,6 +307,12 @@
                 "title_options": "Seleccione una opción",
                 "options": null
             },
+            "pr": {
+                "title": "Obter Instâncias de Lotes",
+                "description": "Obtém instâncias de lotes e dados.",
+                "title_options": "Selecione uma opção",
+                "options": null
+            },
             "form": {
                 "css": "modal-lg",
                 "inputs": [
@@ -243,23 +320,30 @@
                         "type": "input",
                         "placeholder": {
                             "es": "Variable",
-                            "en": "Variable"
+                            "en": "Variable",
+                            "pr": "Variável"
                         },
                         "title": {
                             "es": "Asignar resultado a variable:",
-                            "en": "Assign result to variable:"
+                            "en": "Assign result to variable:",
+                            "pr": "Atribuir resultado à variável:"
                         },
                         "help": {
                             "es": "Nombre de variable sin {}",
-                            "en": "Variable name without {}"
+                            "en": "Variable name without {}",
+                            "pr": "Nome da variável sem {}"
                         },
                         "description":{
                             "es":"Variable donde guardar el resultado de los lotes.",
-                            "en":"Variable where to save batch info."
+                            "en":"Variable where to save batch info.",
+                            "pr":"Variável onde salvar informações do lote."
                         },
                         "remove_vars" : true,
                         "id": "whereToStore",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     }
                 ]
             },
@@ -289,6 +373,12 @@
                 "title_options": "Seleccione una opción",
                 "options": null
             },
+            "pr": {
+                "title": "Obter informações do lote",
+                "description": "Obtém informações sobre um lote.",
+                "title_options": "Selecione uma opção",
+                "options": null
+            },
             "form": {
                 "css": "modal-lg",
                 "inputs": [
@@ -296,44 +386,58 @@
                         "type": "input",
                         "placeholder": {
                             "es": "B4",
-                            "en": "B4"
+                            "en": "B4",
+                            "pr": "B4"
                         },
                         "title": {
                             "es": "idIknoPlus:",
-                            "en": "idIknoPlus:"
+                            "en": "idIknoPlus:",
+                            "pr": "idIknoPlus:"
                         },
                         "help": {
                             "es": "Se puede obtener con el comando anterior de obtener lote de instancias.",
-                            "en": "It can be obtain form last command get batch instances."
+                            "en": "It can be obtain form last command get batch instances.",
+                            "pr": "Pode ser obtido do último comando obter lotes de instâncias."
                         },
                         "description":{
                             "es": "idIknoPlus del lote que se desea obtener completamente en json.",
-                            "en": "idIknoPlus of the batch you want to obtain complete information in json."
+                            "en": "idIknoPlus of the batch you want to obtain complete information in json.",
+                            "pr": "idIknoPlus do lote que você deseja obter informações completas em json."
                         },
                         "id": "idIknoPlus",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     },
                     {
                         "type": "input",
                         "placeholder": {
                             "es": "Variable",
-                            "en": "Variable"
+                            "en": "Variable",
+                            "pr": "Variável"
                         },
                         "title": {
                             "es": "Asignar resultado a variable:",
-                            "en": "Assign result to variable:"
+                            "en": "Assign result to variable:",
+                            "pr": "Atribuir resultado à variável:"
                         },
                         "help": {
                             "es": "Nombre de variable sin {}",
-                            "en": "Variable name without {}"
+                            "en": "Variable name without {}",
+                            "pr": "Nome da variável sem {}"
                         },
                         "description":{
                             "es":"Variable donde guardar el resultado de los lotes.",
-                            "en":"Variable where to save batch info."
+                            "en":"Variable where to save batch info.",
+                            "pr":"Variável onde salvar informações do lote."
                         },
                         "remove_vars" : true,
                         "id": "whereToStore",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     }
                 ]
             },
@@ -363,6 +467,12 @@
                 "title_options": "Seleccione una opción",
                 "options": null
             },
+            "pr": {
+                "title": "Obter lote JSON",
+                "description": "Obtém informações sobre um lote.",
+                "title_options": "Selecione uma opção",
+                "options": null
+            },
             "form": {
                 "css": "modal-lg",
                 "inputs": [
@@ -370,44 +480,58 @@
                         "type": "input",
                         "placeholder": {
                             "es": "B4",
-                            "en": "B4"
+                            "en": "B4",
+                            "pr": "B4"
                         },
                         "title": {
                             "es": "idIknoPlus:",
-                            "en": "idIknoPlus:"
+                            "en": "idIknoPlus:",
+                            "pr": "idIknoPlus:"
                         },
                         "help": {
                             "es": "Se puede obtener con el comando anterior de obtener lote de instancias.",
-                            "en": "It can be obtain form last command get batch instances."
+                            "en": "It can be obtain form last command get batch instances.",
+                            "pr": "Pode ser obtido no último comando obter instâncias de lote."
                         },
                         "description":{
                             "es": "idIknoPlus del lote que se desea obtener completamente en json.",
-                            "en": "idIknoPlus of the batch you want to obtain complete information in json."
+                            "en": "idIknoPlus of the batch you want to obtain complete information in json.",
+                            "pr": "idIknoPlus do lote que você deseja obter informações completas em json."
                         },
                         "id": "idIknoPlus",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     },
                     {
                         "type": "input",
                         "placeholder": {
                             "es": "Variable",
-                            "en": "Variable"
+                            "en": "Variable",
+                            "pr": "Variável"
                         },
                         "title": {
                             "es": "Asignar resultado a variable:",
-                            "en": "Assign result to variable:"
+                            "en": "Assign result to variable:",
+                            "pr": "Atribuir resultado à variável:"
                         },
                         "help": {
                             "es": "Nombre de variable sin {}",
-                            "en": "Variable name without {}"
+                            "en": "Variable name without {}",
+                            "pr": "Nome da variável sem {}"
                         },
                         "description":{
                             "es":"Variable donde guardar el resultado de los lotes.",
-                            "en":"Variable where to save batch info."
+                            "en":"Variable where to save batch info.",
+                            "pr":"Variável onde salvar informações do lote."
                         },
                         "remove_vars" : true,
                         "id": "whereToStore",
-                        "css": "col-md-6"
+                        "css": "col-md-6",
+                        "data_type": "str",
+                        "default": null,
+                        "required": true
                     }
                 ]
             },
