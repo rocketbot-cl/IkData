@@ -26,14 +26,17 @@ Para instalar librerias se debe ingresar por terminal a la carpeta "libs"
 
 import os
 import sys
-import time
 
-base_path = tmp_global_obj["basepath"]
+GetParams = GetParams # type: ignore
+SetVar = SetVar # type: ignore
+PrintException = PrintException # type: ignore
+
+base_path = tmp_global_obj["basepath"] # type: ignore
 cur_path = base_path + 'modules' + os.sep + 'ikData' + os.sep + 'libs' + os.sep
 if cur_path not in sys.path:
     sys.path.append(cur_path)
 
-from ikDataObj import IkDataObj
+from ikDataObj import IkDataObj # type: ignore
 
 global ikData_I
 
@@ -45,8 +48,9 @@ try:
 
         username = GetParams("username")
         password = GetParams("password")
+        server = GetParams("server")
         
-        ikData_I = IkDataObj(username, password)
+        ikData_I = IkDataObj(username, password, server)
 
         ikData_I.requestToken()
 
@@ -63,6 +67,11 @@ try:
         fileToUpload = GetParams("fileToUpload")
         projectId = GetParams("projectId")
         nameToUpload = GetParams("nameToUpload")
+
+        fileToUpload = fileToUpload.replace("\\", "/")
+
+        if not nameToUpload:
+            nameToUpload = fileToUpload.split("/")[-1]
 
         resultAnalyze = ikData_I.sendFileToAnalyze(fileToUpload, projectId, nameToUpload).content.decode()
 

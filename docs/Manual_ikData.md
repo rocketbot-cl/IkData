@@ -1,61 +1,57 @@
-
-
-
-
 # Ik Data
   
-Envia documentos a IkData para ser analizados y extraer información.
-  
-![banner]()
+Send documents and analyze them with AI on Ik Data.  
 
-## Como instalar este módulo
+*Read this in other languages: [English](Manual_IkData.md), [Português](Manual_IkData.pr.md), [Español](Manual_IkData.es.md)*
   
-__Descarga__ e __instala__ el contenido en la carpeta 'modules' en la ruta de rocketbot.
-
-## Como usar este módulo
+![banner](imgs/Banner_IkData.jpg)
+## How to install this module
   
-Para utilizar este módulo tienes que tener cuenta habilitada para usar con Ik Data. Tienes que tener los proyectos ya creados que analizaran los documentos en la misma plataforma.
+To install the module in Rocketbot Studio, it can be done in two ways:
+1. Manual: __Download__ the .zip file and unzip it in the modules folder. The folder name must be the same as the module and inside it must have the following files and folders: \__init__.py, package.json, docs, example and libs. If you have the application open, refresh your browser to be able to use the new module.
+2. Automatic: When entering Rocketbot Studio on the right margin you will find the **Addons** section, select **Install Mods**, search for the desired module and press install.  
 
-## Descripción de los comandos
 
-### Conectar a IkData
+## Description of the commands
+
+### Connect to IkData
   
-Conecta a IkData para empezar a interactuar
-|Parámetros|Descripción|ejemplo|
+Connects to IkData for interactions
+|Parameters|Description|example|
 | --- | --- | --- |
-|Nombre de usuario|Usuario de IkData con el cual interactuar.|usuario|
-|Password|Password del usuario de IkData|********|
-|Asignar resultado a variable|Variable donde guardar el resultado de la conexion.|Variable|
+|Username|User from IkData that you want to interact with.|username|
+|Password|Password of username from IkData.|********|
+|Server|Server that you want to interact with.|https://myapp.ikdata.com:8037|
+|Assign result to variable|Variable where to save conection result.|Variable|
 
-### Subir imagen para analizar
+### Upload image to analyze
   
-Subir una imagen para analizar
-|Parámetros|Descripción|ejemplo|
+Upload an image to analyze
+|Parameters|Description|example|
 | --- | --- | --- |
-|Seleccionar un archivo||C:/Usuario/Documentos|
-|ProjectId|ProjectId con el cual se quiere analizar el documento.|4|
-|Nombre con el cual subir|Nombre con el cual se desea subir a la plataforma (adicionalmente tendra un timestamp en el nombre).|4|
-|Asignar resultado a variable||Variable|
+|Select a file|Path to file|C:/User/Documents|
+|ProjectId|ProjectId with you want to analyze the document.|4|
+|Assign result to variable|Variable where the result will be stored|Variable|
 
-### Instancias de lotes
+### Get Batch Instances
   
-Obtiene las instancias de lotes con sus datos.
-|Parámetros|Descripción|ejemplo|
+Obtains batch instances and data.
+|Parameters|Description|example|
 | --- | --- | --- |
-|Asignar resultado a variable|Variable donde guardar el resultado de los lotes.|Variable|
+|Assign result to variable|Variable where to save batch info.|Variable|
 
-### Información de lote
+### Get Batch Info
   
-Obtiene información de un lote en específico.
-|Parámetros|Descripción|ejemplo|
+Obtains info about a batch.
+|Parameters|Description|example|
 | --- | --- | --- |
-|idIknoPlus|idIknoPlus del lote que se desea obtener completamente en json.|B4|
-|Asignar resultado a variable|Variable donde guardar el resultado de los lotes.|Variable|
+|idIknoPlus|idIknoPlus of the batch you want to obtain complete information in json.|B4|
+|Assign result to variable|Variable where to save batch info.|Variable|
 
-### Información de lote completo en JSON
+### Get Batch JSON
   
-Obtiene completa información de un lote en específico en formato JSON.
-|Parámetros|Descripción|ejemplo|
+Obtains info about a batch.
+|Parameters|Description|example|
 | --- | --- | --- |
-|idIknoPlus|idIknoPlus del lote que se desea obtener completamente en json.|B4|
-|Asignar resultado a variable|Variable donde guardar el resultado de los lotes.|Variable|
+|idIknoPlus|idIknoPlus of the batch you want to obtain complete information in json.|B4|
+|Assign result to variable|Variable where to save batch info.|Variable|
