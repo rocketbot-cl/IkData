@@ -6,7 +6,6 @@ import traceback
 class IkDataObj:
     
     def __init__(self, username, password, server):
-    def __init__(self, username, password, server):
 
         self.username = username
         self.password = password
