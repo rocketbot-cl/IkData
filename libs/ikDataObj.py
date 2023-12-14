@@ -54,8 +54,13 @@ class IkDataObj:
             "projectID" : projectId
         }
 
+        extension = pathToFile.split(".")[-1]
+
+        if extension not in ["pdf", "zip", "png"]:
+            extension = "pdf"
+
         files = {
-            ('file',(nameToUpload ,open(filePath,'rb'),'application/pdf'))
+            ('file',(nameToUpload ,open(filePath,'rb'),'application/' + extension))
         }
 
         r = requests.post(f"{self.server}/app/UploadService/BatchReceiver", headers=headers, data=data, files=files)
